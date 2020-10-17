@@ -34,7 +34,7 @@ def disp():
         for y in range(rl):
             # print(y)
             if (temp[x][y] == "P"):
-                btn = Button(frame, bg="grey")
+                btn = Button(frame, bg="#8B8BFB")
                 btn.grid(column=x, row=y, sticky=N + S + E + W)
             if (temp[x][y] == "E"):
                 btn = Button(frame, bg="yellow")
