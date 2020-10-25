@@ -7,7 +7,7 @@ import os
 import datetime
 import pandas as pd
 
-t = 54
+toll = 54
 def main():
     # Database Global Variable Declaration
     global root
@@ -34,13 +34,13 @@ def main():
     total1 = Label(root, text="TOTAL", padx=62, pady=20, fg="white", font=(20), bg="#646F9A")
     total1.place(x=150, y=100)  # Total Number of Slots
 
-    total2 = Label(root, text=t, padx=60, pady=20, fg="white", font=(20), bg="#19191c")
+    total2 = Label(root, text=toll, padx=60, pady=20, fg="white", font=(20), bg="#19191c")
     total2.place(x=330, y=100)
 
     avl1 = Label(root, text="AVAILABLE", padx=41, pady=20, fg="white", font=(20), bg="#585DC8")
     avl1.place(x=150, y=170)  # Available Slots
     # av=addDB()
-    avl2 = Label(root, text=t - addDB(), padx=60, pady=20, fg="white", font=(20), bg="#263D42")
+    avl2 = Label(root, text=toll - addDB(), padx=60, pady=20, fg="white", font=(20), bg="#263D42")
     avl2.place(x=330, y=170)
 
     info1 = Label(root, text="Enter the Vehicle Number", width=20, fg="white", bg="#696c70", font=("bold", 19))
@@ -85,7 +85,7 @@ def startDB():
 # update location on map for filling
 def loci():
     try:
-        global rl, cl, t, emp_count
+        global rl, cl, toll, emp_count
         s, a, b, rl1, cl1 = position()
         # print(temp[1][4])
         rl = rl1
@@ -254,10 +254,10 @@ def findLoc():
 
 # update available slots
 def aval():
-    global t
+    global toll
     o = 0
     p = addDB()
-    o = t - p
+    o = toll - p
 
     avl2 = Label(root, text=o, padx=60, pady=20, fg="white", font=(20), bg="#263D42")
     avl2.place(x=330, y=170)
