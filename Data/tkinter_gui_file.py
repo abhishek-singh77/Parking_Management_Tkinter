@@ -8,11 +8,6 @@ import datetime
 import pandas as pd
 
 t = 54
-
-
-# rl=11 #rows length
-# cl=10 #column length
-
 def main():
     # Database Global Variable Declaration
     global root
